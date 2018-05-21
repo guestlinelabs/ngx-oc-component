@@ -15,7 +15,7 @@ npm i ngx-oc-component --save
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
-import {OcModule} from 'ngx-oc-component/oc.module';
+import {OcModule} from 'ngx-oc-component/oc-module';
 
 @NgModule({
     imports: [BrowserModule, OcModule],
