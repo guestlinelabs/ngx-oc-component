@@ -1,27 +1,45 @@
-# Extensionspack
+# ngx-oc-component
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+`ngx-oc-component` is an small Angular extension that facilitates the inclusion of any [OpenComponents](https://github.com/opencomponents/oc) in angular applications.
 
-## Development server
+It was built for modern browsers using _TypeScript, CSS3 and HTML5_ and Angular `>=5.0.0`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Usage
+1. Install `ngx-oc-component` using [npm](https://www.npmjs.com/package/@guestlinelabs/ngx-oc-component):
+```
+npm i ngx-oc-component --save
+```
 
-## Code scaffolding
+2. Import OcModule into your AppModule class
+```
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppComponent} from './app.component';
+import {OcModule} from 'ngx-oc-component/oc.module';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+    imports: [BrowserModule, OcModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent],
+})
+export class AppModule {
 
-## Build
+}
+```
+3. Build OcOptions for the template
+```
+import {OcOptions} from 'ngx-oc-component/oc-options';
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+public ocOptions: OcOptions = {
+    baseUrl: 'yourBaseRegistryUrl',
+    name: 'yourComponentName',
+    version: 'yourComponentVersion',
+    parameters: yourAdditionalParameters'
+};
+```
+4. In template
+```
+<ngx-oc-component [options]="ocOptions"
+                  (rendered)="onRendered($event)">
+</ngx-oc-component>
+```
