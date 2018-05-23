@@ -36,7 +36,9 @@ public ocOptions: OcOptions = {
     version: 'yourComponentVersion',
     parameters: yourAdditionalParameters'
 };
-```
+``` 
+where `parameters: any`
+
 #### 4. In template
 ```html
 <ngx-oc-component [options]="ocOptions"
