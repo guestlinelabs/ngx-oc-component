@@ -10,7 +10,7 @@ It was built for modern browsers using _TypeScript, CSS3 and HTML5_ and Angular 
 npm i ngx-oc-component --save
 ```
 
-#### 2. Import OcModule into your AppModule class
+#### 2. Import `OcModule` into your `AppModule` class
 ```ts
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
@@ -26,7 +26,7 @@ export class AppModule {
 
 }
 ```
-#### 3. Build OcOptions for the template
+#### 3. Build `OcOptions` for the template
 ```ts
 import {OcOptions} from 'ngx-oc-component/oc-options';
 
