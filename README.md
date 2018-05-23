@@ -4,10 +4,17 @@
 
 It was built for modern browsers using _TypeScript, CSS3 and HTML5_ and Angular `>=5.0.0`
 
-## Usage
-#### 1. Install `ngx-oc-component` using [npm](https://www.npmjs.com/package/@guestlinelabs/ngx-oc-component):
+## Installation
+#### Install `ngx-oc-component` using [npm](https://www.npmjs.com/package/ngx-oc-component):
 ```sh
 npm i ngx-oc-component --save
+```
+
+## Usage
+#### 1. Include the oc-client in your `index.html`:
+The [oc-client](https://github.com/opencomponents/oc/wiki/Browser-client) library is available inside your configured OC Registry. 
+```html
+<script src="https://your-oc-registry.xyz/oc-client/client.js"></script>
 ```
 
 #### 2. Import `OcModule` into your `AppModule` class
