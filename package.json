@@ -1,6 +1,6 @@
 {
   "name": "ngx-oc-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "extension that facilitates the inclusion of any OpenComponents in angular applications",
   "scripts": {
     "ng": "ng",
