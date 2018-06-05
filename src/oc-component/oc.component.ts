@@ -31,8 +31,9 @@ export class OcComponent implements OnInit {
     const div = this.renderer.createElement('div');
     this.renderer.setProperty(div, 'innerHTML', content);
     this.renderer.appendChild(this.el.nativeElement, div);
-
-    oc.events.on('oc:rendered', (data) => { this.rendered.emit(data); });
+    oc.events.on('oc:rendered', (event, data) => {
+      this.rendered.emit({event, data});
+    });
     oc.renderUnloadedComponents();
   }
 }

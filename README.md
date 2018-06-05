@@ -68,7 +68,9 @@ where `parameters: any`.
 
 Also, define a public method for `rendered` event
 ```ts
-public onRendered(event) {
+public onRendered(e: any) {
+    const event = e.event;
+    const data = e.data;
     /* your code */
 }
 ```
