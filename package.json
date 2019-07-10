@@ -13,8 +13,7 @@
     "url": "https://github.com/guestlinelabs/ngx-oc-component.git"
   },
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@angular/common": "^6.0.2",
     "@angular/compiler": "^6.0.2",
