@@ -32,7 +32,7 @@
     "@angular/language-service": "^6.0.2",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
-    "ng-packagr": "^2.4.5",
+    "ng-packagr": "^10.1.1",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
   },
